@@ -23,11 +23,15 @@ fi
 flavor=`lsb_release -c -s`
 os=`uname`
 
+if [[ ! $(cat /proc/1/sched | head -n 1 | grep init) ]]; then {
+    echo Skipping installations, running in docker
+} else {
+    echo ""
+    echo "Running install scripts for: ${os}-${flavor}"
+    # https://ostechnix.com/how-to-run-all-scripts-in-a-directory-in-linux
+    run-parts --regex '.*.sh$' __setup/${os}/${flavor}
+} fi
 
-echo ""
-echo "Running install scripts for: ${os}-${flavor}"
-# https://ostechnix.com/how-to-run-all-scripts-in-a-directory-in-linux
-run-parts --regex '.*.sh$' __setup/${os}/${flavor}
 
 # run the stow command for the passed in directory ($2) in location $1
 stowit() {
