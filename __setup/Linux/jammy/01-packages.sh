@@ -2,7 +2,7 @@
 
 sudo apt update
 
-sudo apt install \
+sudo apt install -y \
 	build-essential \
 	ripgrep \
 	htop \
