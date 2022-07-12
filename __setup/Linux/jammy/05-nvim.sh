@@ -1,10 +1,15 @@
 #!/usr/bin/bash
 
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/
-sudo ln -s /usr/local/bin/nvim.appimage /usr/local/bin/nvim
+# get it
+wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
 
+# install it
+sudo dpkg -i nvim-linux64.deb
+
+# delete it
+rm nvim-linux64.deb
+
+rm -rf ~/.config/nvim
 
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
