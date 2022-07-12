@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 version=1.18.3
 
