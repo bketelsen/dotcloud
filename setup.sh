@@ -44,6 +44,8 @@ echo "Stowing apps for user: ${whoami}"
 
 # install apps available to local users and root
 for app in ${base[@]}; do
+    find ${app} -maxdepth 1 -type f | sed 's!.*/!!' | xargs -I % sh -c 'rm -rf ~/%'
+
     stowit "${HOME}" $app 
 done
 
