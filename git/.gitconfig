@@ -1,0 +1,7 @@
+[user]
+	name = Brian Ketelsen
+	email = bketelsen@gmail.com
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
