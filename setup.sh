@@ -43,6 +43,9 @@ stowit() {
     stow -v -R -t ${usr} ${app}
 }
 
+sudo apt update && sudo apt install -y stow
+
+
 echo ""
 echo "Stowing apps for user: ${whoami}"
 
