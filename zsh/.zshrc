@@ -132,9 +132,16 @@ unset key
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# nvm for node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# add Go to path
 export PATH=$HOME/bin:$PATH:/usr/local/go/bin
+
+# set GOPATH to home
 export GOPATH=~
+
+# set the completion for sd scripts
+fpath=(~/dotcloud/sd $fpath)

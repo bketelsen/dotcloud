@@ -63,5 +63,13 @@ for app in ${useronly[@]}; do
     fi
 done
 
+# Special case SD install until I decide it is worth a fork
+# to support stow
+
+# ensure $HOME/bin exists
+mkdir -p "${HOME}/bin"
+# symlink the sd script
+ln -s "$(pwd)/sd/sd" ~/bin/sd
+
 echo ""
 echo "##### ALL DONE"
