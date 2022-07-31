@@ -4,6 +4,8 @@
 git submodule init
 git submodule update
 
+dotfiles=`pwd`
+
 # what directories should be installable by all users including the root user
 base=(
     zsh
@@ -69,7 +71,8 @@ done
 # ensure $HOME/bin exists
 mkdir -p "${HOME}/bin"
 # symlink the sd script
-ln -s "$(pwd)/sd/sd" ~/bin/sd
+ln -s "${dotfiles}/sd/sd" ~/bin/sd
 
+ln -s "${dotfiles}/scripts" ~/sd
 echo ""
 echo "##### ALL DONE"
