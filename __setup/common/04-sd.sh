@@ -9,4 +9,4 @@ if [[ -a /home/linuxbrew/.linuxbrew/bin ]]; then
 fi
 
 
-git clone https://github.com/ianthehenry/sd.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/sd
+git clone https://github.com/ianthehenry/sd.git ~/.oh-my-zsh/custom/plugins/sd
