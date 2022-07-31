@@ -15,6 +15,7 @@ brew install zsh \
 	ripgrep \
 	lazygit \
 	ncdu \
-	htop 
+	htop \
+	stow
 
 mkdir -p ~/.nvm

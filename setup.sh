@@ -54,6 +54,8 @@ find __setup/${os}/${flavor}/pre/ -name "*.sh" -exec {} \;
 echo "Running common scripts"
 find __setup/common/ -name "*.sh" -exec {} \;
 
+echo "Running install scripts for: ${os}-${flavor}"
+find __setup/${os}/${flavor}/ -name "*.sh" -exec {} \;
 
 # run the stow command for the passed in directory ($2) in location $1
 stowit() {
