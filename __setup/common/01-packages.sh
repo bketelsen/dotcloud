@@ -9,8 +9,7 @@ if [[ -a /home/linuxbrew/.linuxbrew/bin ]]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-brew install \ 
-	zsh \
+brew install zsh \
 	neovim \
 	nvm \
 	ripgrep \
