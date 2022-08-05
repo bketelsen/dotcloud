@@ -1,0 +1,32 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - build-essential
+  - git
+  - snapcraft
+  - curl 
+  - wget
+  - htop
+  - zsh
+groups:
+  - docker
+  - adm
+  - www-data
+users:
+  - default
+  - name: bjk
+    shell: /usr/bin/zsh
+    gecos: Brian Ketelsen
+    primary_group: staff
+    groups: [ users, staff, adm, sudo, www-data ]
+    ssh_import_id:
+      - gh:bketelsen
+    sudo: ALL=(ALL) NOPASSWD:ALL
+timezone: US/New_York
+snap:
+  commands:
+  - [ install, docker ]
+runcmd:
+  - adduser ubuntu docker
+  - adduser bjk docker
