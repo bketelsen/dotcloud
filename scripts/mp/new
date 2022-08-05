@@ -9,8 +9,12 @@ set -euo pipefail
 
 NAME=$(gum input --placeholder "instance name")
 
+echo "Number of Cores:"
 CPU=$(gum choose --item.foreground 250 "1" "2" "4" "8")
+echo "Memory:"
 MEM=$(gum choose --item.foreground 250 "2G" "4G" "8G" "16G")
+
+echo "Disk:"
 DISK=$(gum choose --item.foreground 250 "10G" "20G" "50G" "100G")
 
 echo "Use Bridged Network?"
@@ -24,6 +28,7 @@ if [ "$CHOICE" != "$NO" ]; then
     BRIDGED="--bridged"
 fi
 
+echo "Choose cloud-init:"
 CLOUDINIT=$(ls ~/virtualization/cloud/*.yaml | gum choose)
 
 echo "Instance: $NAME"
