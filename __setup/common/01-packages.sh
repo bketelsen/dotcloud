@@ -17,6 +17,8 @@ brew install zsh \
 	ncdu \
 	htop \
 	starship \
+	direnv \
+	gum \
 	stow
 
 mkdir -p ~/.nvm
