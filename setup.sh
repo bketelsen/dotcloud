@@ -16,6 +16,7 @@ base=(
 useronly=(
     git
     multpass
+    sd
 )
 
 if ! command -v lsb_release &> /dev/null
