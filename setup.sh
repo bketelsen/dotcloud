@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # make sure we have pulled in and updated any submodules
-git submodule init
-git submodule update
+git submodule update --init
 
 dotfiles=`pwd`
 
