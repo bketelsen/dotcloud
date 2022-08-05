@@ -16,6 +16,7 @@ brew install zsh \
 	lazygit \
 	ncdu \
 	htop \
+	starship \
 	stow
 
 mkdir -p ~/.nvm
