@@ -3,4 +3,4 @@
 sudo apt update
 
 sudo apt install -y \
-	build-essential 
+	build-essential curl git wget

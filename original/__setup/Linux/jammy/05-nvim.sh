@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # get it
-wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
+wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-linux64.deb
 
 # install it
 sudo dpkg -i nvim-linux64.deb

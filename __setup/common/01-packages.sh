@@ -19,6 +19,7 @@ brew install zsh \
 	starship \
 	direnv \
 	gum \
-	stow
+	stow \
+	zsh
 
 mkdir -p ~/.nvm
