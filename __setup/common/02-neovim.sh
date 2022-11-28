@@ -10,5 +10,6 @@ if [[ -a /home/linuxbrew/.linuxbrew/bin ]]; then
 fi
 
 rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
