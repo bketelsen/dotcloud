@@ -20,7 +20,6 @@ brew install zsh \
 	direnv \
 	gum \
 	stow \
-	tree-sitter \
-	zsh
+	tree-sitter 
 
 mkdir -p ~/.nvm
